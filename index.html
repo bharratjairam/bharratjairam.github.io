@@ -105,7 +105,7 @@
             padding-left: 15px;
         }
 
-        /* Home/Hero Section (Neutral/No Red, Better Spacing) */
+        /* Home/Hero Section (Animated Background & Red Accents) */
         #home {
             height: 100vh;
             display: flex;
@@ -115,6 +115,21 @@
             text-align: center;
             padding-top: 0;
             gap: 2.5rem;
+            
+            /* Sleek animated gradient background with a subtle grid overlay */
+            background: 
+                linear-gradient(rgba(255, 255, 255, 0.03) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(255, 255, 255, 0.03) 1px, transparent 1px),
+                linear-gradient(-45deg, #0a0a0a, #1a1a1a, #2a0505, #111111);
+            background-size: 30px 30px, 30px 30px, 400% 400%;
+            animation: gradientBG 15s ease infinite;
+        }
+
+        /* Keyframes for the moving gradient */
+        @keyframes gradientBG {
+            0% { background-position: 0% 0%, 0% 0%, 0% 50%; }
+            50% { background-position: 0% 0%, 0% 0%, 100% 50%; }
+            100% { background-position: 0% 0%, 0% 0%, 0% 50%; }
         }
 
         #home h1 {
@@ -122,6 +137,10 @@
             color: #ffffff;
             line-height: 1.1;
             letter-spacing: 2px;
+        }
+
+        .accent-red-text {
+            color: var(--accent-red);
         }
 
         #home p {
@@ -135,7 +154,7 @@
             background-color: transparent;
             color: #ffffff;
             padding: 15px 40px;
-            border: 2px solid #ffffff;
+            border: 2px solid var(--accent-red);
             border-radius: 4px;
             font-weight: bold;
             font-size: 1.1rem;
@@ -146,9 +165,9 @@
         }
 
         .btn-home:hover {
-            background-color: #ffffff;
-            color: #000000;
-            box-shadow: 0 0 20px rgba(255, 255, 255, 0.2);
+            background-color: var(--accent-red);
+            color: #ffffff;
+            box-shadow: 0 0 15px rgba(229, 57, 53, 0.4);
         }
 
         /* Experience & Education Cards (Keeps Red Accents) */

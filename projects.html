@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bharrat Jairam | Projects</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <nav>
+        <div class="logo">Bharrat Jairam</div>
+        <ul>
+            <li><a href="index.html#home">Home</a></li>
+            <li><a href="index.html#education">Education</a></li>
+            <li><a href="index.html#experience">Experience</a></li>
+            <li><a href="index.html#skills">Skills</a></li>
+            <li><a href="#" style="color: #ffffff; border-bottom: 2px solid #ffffff;">Projects</a></li>
+        </ul>
+    </nav>
+
+    <header class="page-header bg">
+        <h1>Projects</h1>
+        <p>A collection of my work across game development, software engineering, and UX design.</p>
+        <div class="page-nav-buttons">
+            <a href="#games" class="btn-nav">Game Development</a>
+            <a href="#ux" class="btn-nav">UX/UI Design</a>
+            <a href="#software" class="btn-nav">Software & IT</a>
+        </div>
+    </header>
+
+    <section id="games">
+        <div class="section-content">
+        <h2 class="section-title">Game Development</h2>
+        <div class="project-grid">
+
+            <div class="project-card has-image">
+                <div class="blur-wrapper" style="background-image: url('images/NecromancerEscape.jpeg');">
+                    <img src="images/NecromancerEscape.jpeg" alt="Game Screenshot" class="project-image">
+                </div>                
+                <div class="project-content">
+                    <div class="project-title">Necromancer Escape</div>
+                    <div class="project-desc">A 2D pixel art platformer game focused on fluid movement and challenging level design. Responsible for full development, including logic, custom asset creation, and logo design.</div>
+                    <div class="tech-stack">
+                        <span class="tech-tag">Unity</span>
+                        <span class="tech-tag">C#</span>
+                        <span class="tech-tag">Pixel Art</span>
+                        <span class="tech-tag">Construct</span>
+                    </div>
+                    <a href="https://bharratj.itch.io/necromancer-escape" class="btn-project">Play</a>
+                </div>
+            </div>
+
+            <div class="project-card has-image">
+                <div class="blur-wrapper" style="background-image: url('images/WordPlinko.png');">
+                    <img src="images/WordPlinko.png" alt="Game Screenshot" class="project-image">
+                </div>
+                <div class="project-content">
+                    <div class="project-title">Word Plinko</div>
+                    <div class="project-desc">A physics-based puzzle game combining classical Plinko mechanics with word-building challenges. Focused on 2D physics simulations and collision detection.</div>
+                    <div class="tech-stack">
+                        <span class="tech-tag">Unity</span>
+                        <span class="tech-tag">Procedural Generation</span>
+                        <span class="tech-tag">Adaptive Difficulty</span>
+                        <span class="tech-tag">Physics Engine</span>
+                    </div>
+                    <a onclick="openModal('videos/WordPlinkoDemo.mov')" class="btn-project">View Demo</a>
+                </div>
+            </div>
+
+            <div class="project-card has-image">
+                <div class="blur-wrapper" style="background-image: url('images/AlphabetRush.png');">
+                    <img src="images/AlphabetRush.png" alt="Alphabet Rush Gameplay" class="project-image">
+                </div>
+                <div class="project-content">
+                    <div class="project-title">Alphabet Rush</div>
+                    <div class="project-desc">A fast-paced interactive game requiring quick reflexes and pattern recognition. Engineered core game loop mechanics and user interface event handling.</div>
+                    <div class="tech-stack">
+                        <span class="tech-tag">GoogleAI Studio</span>
+                        <span class="tech-tag">Prompt Engineering</span>
+                    </div>
+                    <a href="#" class="btn-disabled">View Demo</a>
+                </div>
+            </div>
+
+            <div class="project-card has-image">
+                <div class="blur-wrapper" style="background-image: url('images/UnittyBehaviorTree.png');">
+                    <img src="images/UnittyBehaviorTree.png" alt="Unity AI Navigation" class="project-image">
+                </div>
+                <div class="project-content">
+                    <div class="project-title">Unity AI Navigation</div>
+                    <div class="project-desc">Implemented intelligent pathfinding and behavior trees for non-player characters within a 3D environment, utilizing Unity's NavMesh system for obstacle avoidance and dynamic routing.</div>
+                    <div class="tech-stack">
+                        <span class="tech-tag">Unity</span>
+                        <span class="tech-tag">C#</span>
+                        <span class="tech-tag">AI/NavMesh</span>
+                        <span class="tech-tag">Behavior Trees</span>
+                    </div>
+                    <a href="#" class="btn-disabled">View Repository</a>
+                </div>
+            </div>
+
+            <div class="project-card has-image">
+                <div class="blur-wrapper" style="background-image: url('images/NightInTheWoods.png');">
+                    <img src="images/NightInTheWoods.png" alt="A Night in the Woods Gameplay" class="project-image">
+                </div>
+                <div class="project-content">
+                    <div class="project-title">A Night in the Woords</div>
+                    <div class="project-desc">A branch-based "Choose Your Own Adventure" text game. Showcases creative writing, branching logic, variable tracking, and state management within a narrative structure.</div>
+                    <div class="tech-stack">
+                        <span class="tech-tag">Twine</span>
+                        <span class="tech-tag">HTML/CSS</span>
+                        <span class="tech-tag">Narrative Design</span>
+                    </div>
+                    <a href="https://bharratj.itch.io/a-night-in-the-woods" class="btn-project">Play</a>
+                </div>
+            </div>
+
+        </div>
+        </div>
+    </section>
+
+    <section id="ux">
+        <div class="section-content">
+        <h2 class="section-title">UX/UI Design Prototypes</h2>
+        <div class="project-grid">
+            
+            <div class="project-card has-image">
+                <div class="blur-wrapper" style="background-image: url('images/WindowsGo.png');">
+                    <img src="images/WindowsGo.png" alt="Windows Go Edition" class="project-image">
+                </div>
+                <div class="project-content">
+                <div class="project-title">Windows Go Edition</div>
+                <div class="project-desc">Designed conceptual models, user personas, and use cases for a prototype OS targetted towards mobile devices.</div>
+                <div class="tech-stack">
+                    <span class="tech-tag">Figma</span>
+                    <span class="tech-tag">HCI</span>
+                </div>
+                <a href="#" class="btn-disabled">View Prototype</a>
+            </div>
+            </div>
+            </div>
+
+        </div>
+        </div>
+    </section>
+
+    <section id="software">
+        <div class="section-content">
+            <h2 class="section-title">Software Engineering & IT</h2>
+            <div class="project-grid">
+
+                <div class="project-card">
+                    <div class="project-title">Inventory Query System</div>
+                    <div class="project-desc">A system for querying and managing inventory data.</div>
+                    <div class="tech-stack">
+                        <span class="tech-tag">Java</span>
+                        <span class="tech-tag">Eclipse</span>
+                    </div>
+                    <a href="#" class="btn-disabled">View Repository</a>
+                </div>
+
+                <div class="project-card">
+                    <div class="project-title">Fundamentals</div>
+                    <div class="project-desc">An overview of fundamental concepts in Python programming</div>
+                    <div class="tech-stack">
+                        <span class="tech-tag">Python</span>
+                        <span class="tech-tag">Anaconda</span>
+                    </div>
+                    <a href="#" class="btn-disabled">View Repository</a>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p><strong>Bharrat Jairam</strong> | Schenectady, NY</p>
+        <p>Email: <a href="mailto:bharratjairam1@gmail.com">bharratjairam1@gmail.com</a> | Phone: 518-982-6442</p>
+        <p style="margin-top: 15px; font-size: 0.85rem;">&copy; 2026 Bharrat Jairam. Created for GitHub Pages.</p>
+    </footer>
+
+    <!-- Modal for video playback -->
+    <div id="videoModal" class="modal">
+        <div class="modal-content">
+            <span class="close-btn">&times;</span>
+            <div class="video-container">
+                <iframe id="projectVideo" src="" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe>
+            </div>
+        </div>
+    </div>
+
+    <script>
+    // Get the modal elements
+    const modal = document.getElementById("videoModal");
+    const iframe = document.getElementById("projectVideo");
+    const closeBtn = document.querySelector(".close-btn");
+
+    // Create a function to open the modal
+    // Add onclick="openModal('YOUR_YOUTUBE_EMBED_LINK')" to any button!
+    function openModal(videoUrl) {
+        iframe.src = videoUrl; // Load the video
+        modal.style.display = "block"; // Show the window
+    }
+
+    // Close the modal when clicking the 'X'
+    closeBtn.onclick = function() {
+        modal.style.display = "none";
+        iframe.src = ""; // Stop the video from playing in the background
+    }
+
+    // Close the modal when clicking anywhere outside the box
+    window.onclick = function(event) {
+        if (event.target == modal) {
+            modal.style.display = "none";
+            iframe.src = "";
+        }
+    }
+</script>
+
+</body>
+</html>

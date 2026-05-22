@@ -1,2 +1,2 @@
 # bharratjairam.github.io
-Profile
+[Click to View Profile!](https://bharratjairam.github.io)

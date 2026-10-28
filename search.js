@@ -6,7 +6,7 @@
  */
 (function () {
     const PAGES = ["index.html", "projects.html"];
-    const SUGGESTIONS = ["Python", "SQL Server", "Unity", "Help Desk", "Active Directory", "Game"];
+    const SUGGESTIONS = ["Forensics", "Wireshark", "Python", "SQL Server", "Unity", "Help Desk"];
 
     const currentPage = (() => {
         const file = location.pathname.split("/").pop();

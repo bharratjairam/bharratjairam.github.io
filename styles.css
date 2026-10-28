@@ -829,3 +829,13 @@ body.search-open {
         display: none;
     }
 }
+
+/* Course label on coursework project cards */
+.project-course {
+    font-size: 0.75rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: var(--accent-red);
+    margin-bottom: 6px;
+}

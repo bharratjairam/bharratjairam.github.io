@@ -53,6 +53,7 @@ nav {
 
 nav .logo {
     font-size: 1.5rem;
+    text-decoration: none;
     font-weight: 700;
     color: #ffffff;
     letter-spacing: 1px;
@@ -304,7 +305,7 @@ h2.section-title {
 /* Project Grid & Cards */
 .project-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(min(320px, 100%), 1fr));
     gap: 30px;
     max-width: 1200px;
     margin: 0 auto;
@@ -461,6 +462,7 @@ footer p {
 }
 
 footer a {
+    white-space: nowrap;
     color: #cccccc;
     text-decoration: underline;
 }
@@ -656,8 +658,13 @@ body.search-open {
     color: var(--text-muted);
 }
 
+.search-input-row svg {
+    flex-shrink: 0;
+}
+
 .search-input {
     flex: 1;
+    min-width: 0;
     background: transparent;
     border: none;
     outline: none;
@@ -791,19 +798,58 @@ body.search-open {
     100% { box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3); }
 }
 
-/* --- Smaller screens --- */
+/* --- Mobile menu button (hidden on desktop) --- */
+.menu-toggle {
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    gap: 5px;
+    width: 42px;
+    height: 38px;
+    padding: 0 10px;
+    background: var(--secondary-bg);
+    border: 1px solid var(--border-color);
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+.menu-toggle span {
+    display: block;
+    height: 2px;
+    background: #e0e0e0;
+    border-radius: 2px;
+    transition: transform 0.2s ease, opacity 0.2s ease;
+}
+
+nav.menu-open .menu-toggle span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+nav.menu-open .menu-toggle span:nth-child(2) { opacity: 0; }
+nav.menu-open .menu-toggle span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+
+/* Hover lift effects only on devices with a real mouse (avoids "stuck" hovers on phones) */
+@media (hover: none) {
+    .timeline-item:hover,
+    .project-card:hover {
+        transform: none;
+    }
+}
+
+/* --- Tablets & phones --- */
 @media (max-width: 900px) {
     nav {
-        padding: 15px 20px;
-        flex-wrap: wrap;
+        padding: 12px 16px;
         gap: 10px;
     }
 
-    nav ul {
-        gap: 18px;
-        order: 3;
-        width: 100%;
-        flex-wrap: wrap;
+    nav .logo {
+        font-size: 1.25rem;
+        margin-right: auto;
+    }
+
+    .search-trigger {
+        padding: 0;
+        width: 42px;
+        height: 38px;
+        justify-content: center;
     }
 
     .search-trigger kbd,
@@ -811,22 +857,236 @@ body.search-open {
         display: none;
     }
 
-    html {
-        scroll-padding-top: 130px;
+    .menu-toggle {
+        display: flex;
     }
 
+    /* Links become a drop-down panel under the bar */
+    nav ul {
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        flex-direction: column;
+        gap: 0;
+        background: #0d0d0d;
+        border-bottom: 1px solid var(--border-color);
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
+        padding: 6px 0;
+    }
+
+    nav.menu-open ul {
+        display: flex;
+    }
+
+    nav ul li a {
+        display: block;
+        padding: 14px 20px;
+        font-size: 1rem;
+        border-bottom: none !important;
+    }
+
+    nav ul li a:hover,
+    nav ul li a:active {
+        background: var(--secondary-bg);
+        color: #ffffff;
+    }
+
+    html {
+        scroll-padding-top: 75px;
+    }
+
+    /* Tighter section spacing */
+    section {
+        padding: 70px 16px 40px;
+    }
+
+    h2.section-title {
+        font-size: 1.6rem;
+        margin-bottom: 25px;
+        border-left-width: 4px;
+        padding-left: 12px;
+    }
+
+    /* Hero */
     #home {
         height: auto;
-        min-height: 100vh;
-        padding: 150px 20px 60px;
+        min-height: 100svh;
+        padding: 110px 20px 60px;
+        gap: 1.5rem;
     }
 
     #home h1 {
-        font-size: 3rem;
+        font-size: 2.8rem;
+    }
+
+    #home .label {
+        font-size: 1.05rem;
+        line-height: 1.6;
+    }
+
+    #home p {
+        font-size: 1.05rem;
+        line-height: 1.7;
+    }
+
+    .home-buttons {
+        flex-direction: column;
+        width: 100%;
+        max-width: 340px;
+        gap: 12px;
+    }
+
+    .home-buttons a,
+    .btn-home {
+        width: 100%;
+    }
+
+    .btn-home {
+        padding: 14px 20px;
+        font-size: 1rem;
+    }
+
+    /* Experience & education cards */
+    .timeline-item {
+        padding: 20px;
+        margin-bottom: 20px;
+    }
+
+    .item-header {
+        flex-direction: column;
+        gap: 2px;
+        margin-bottom: 10px;
+    }
+
+    .item-title {
+        font-size: 1.25rem;
+    }
+
+    .item-subtitle {
+        font-size: 1rem;
+    }
+
+    .item-date {
+        font-size: 0.9rem;
+    }
+
+    .timeline-item ul {
+        padding-left: 18px;
+        font-size: 0.95rem;
+    }
+
+    .sub-list {
+        margin-left: 4px;
+    }
+
+    /* Skills */
+    .skills-container {
+        gap: 16px;
+    }
+
+    .skill-box {
+        padding: 18px;
+    }
+
+    .badge {
+        padding: 6px 12px;
+        margin: 4px 2px;
+        font-size: 0.85rem;
+    }
+
+    /* Projects page */
+    .page-header {
+        padding: 100px 16px 40px;
+    }
+
+    .page-header h1 {
+        font-size: 2.4rem;
+    }
+
+    .page-header p {
+        font-size: 1.05rem;
+    }
+
+    .page-nav-buttons {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 10px;
+        margin-top: 25px;
+    }
+
+    .btn-nav {
+        padding: 10px 8px;
+        font-size: 0.78rem;
+        letter-spacing: 0.5px;
+        text-align: center;
+    }
+
+    .project-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .project-card,
+    .project-content {
+        padding: 20px;
+    }
+
+    .project-card.has-image {
+        padding: 0;
+    }
+
+    .blur-wrapper {
+        height: 180px;
+    }
+
+    .project-title {
+        font-size: 1.25rem;
+    }
+
+    .btn-project,
+    .btn-disabled {
+        padding: 12px 15px;
+    }
+
+    /* Video modal */
+    .modal-content {
+        width: 94%;
+        padding: 14px;
+    }
+
+    /* Search */
+    .search-overlay {
+        padding: 70px 10px 10px;
+    }
+
+    .search-panel {
+        max-height: calc(100svh - 90px);
     }
 
     .search-footer {
         display: none;
+    }
+
+    footer {
+        padding: 30px 16px;
+        font-size: 0.95rem;
+    }
+}
+
+/* Very small phones */
+@media (max-width: 360px) {
+    #home h1 {
+        font-size: 2.3rem;
+    }
+
+    nav .logo {
+        font-size: 1.1rem;
+    }
+
+    .page-nav-buttons {
+        grid-template-columns: 1fr;
     }
 }
 

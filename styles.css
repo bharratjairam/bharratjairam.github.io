@@ -106,14 +106,14 @@ h2.section-title {
 
 /* Home/Hero Section (Animated Background & Red Accents) */
 #home {
-    height: 100vh;
+    min-height: 100vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     text-align: center;
-    padding-top: 0;
-    gap: 2.5rem; 
+    padding: 110px 20px 60px;
+    gap: 2rem;
 }
 .bg{
     /* Sleek animated gradient background with a subtle grid overlay */
@@ -798,6 +798,42 @@ body.search-open {
     100% { box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3); }
 }
 
+/* --- Download Resume button --- */
+.btn-resume {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    background-color: var(--accent-red);
+    color: #ffffff;
+    padding: 14px 32px;
+    border: 2px solid var(--accent-red);
+    border-radius: 4px;
+    font-weight: bold;
+    font-size: 1rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: all 0.3s ease;
+}
+
+.btn-resume:hover {
+    background-color: transparent;
+    box-shadow: 0 0 15px rgba(229, 57, 53, 0.4);
+}
+
+.page-header .btn-resume {
+    margin-top: 25px;
+    padding: 10px 24px;
+    font-size: 0.9rem;
+}
+
+nav ul li a.nav-resume {
+    color: var(--accent-red);
+}
+
+nav ul li a.nav-resume:hover {
+    color: #ffffff;
+}
+
 /* --- Mobile menu button (hidden on desktop) --- */
 .menu-toggle {
     display: none;
@@ -941,6 +977,12 @@ nav.menu-open .menu-toggle span:nth-child(3) { transform: translateY(-7px) rotat
     .home-buttons a,
     .btn-home {
         width: 100%;
+    }
+
+    #home .btn-resume {
+        width: 100%;
+        max-width: 340px;
+        justify-content: center;
     }
 
     .btn-home {

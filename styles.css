@@ -798,40 +798,83 @@ body.search-open {
     100% { box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3); }
 }
 
-/* --- Download Resume button --- */
-.btn-resume {
+/* --- Buttons with an icon (Download Resume, Open in New Tab) --- */
+.btn-home {
+    line-height: 1.2;
+}
+
+a.btn-home {
     display: inline-flex;
     align-items: center;
+    justify-content: center;
+}
+
+.btn-with-icon svg {
+    display: block;
+    flex-shrink: 0;
+}
+
+.btn-with-icon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
     gap: 10px;
-    background-color: var(--accent-red);
+}
+
+/* Current page in the nav */
+nav ul li a.active {
     color: #ffffff;
-    padding: 14px 32px;
-    border: 2px solid var(--accent-red);
-    border-radius: 4px;
-    font-weight: bold;
-    font-size: 1rem;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-    transition: all 0.3s ease;
+    border-bottom: 2px solid #ffffff;
 }
 
-.btn-resume:hover {
-    background-color: transparent;
-    box-shadow: 0 0 15px rgba(229, 57, 53, 0.4);
+/* --- Resume page --- */
+.resume-actions {
+    margin-top: 30px;
 }
 
-.page-header .btn-resume {
-    margin-top: 25px;
-    padding: 10px 24px;
-    font-size: 0.9rem;
+.resume-section {
+    padding: 60px 20px;
 }
 
-nav ul li a.nav-resume {
-    color: var(--accent-red);
+.resume-pages {
+    max-width: 860px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
 }
 
-nav ul li a.nav-resume:hover {
+.resume-page {
+    display: block;
+    background: #ffffff;
+    border-radius: 6px;
+    overflow: hidden;
+    border: 1px solid var(--border-color);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.6);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.resume-page:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 14px 36px rgba(0, 0, 0, 0.7), 0 0 0 2px var(--accent-red);
+}
+
+.resume-page img {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+.resume-note {
+    text-align: center;
+    color: var(--text-muted);
+    margin-top: 30px;
+    font-size: 0.95rem;
+}
+
+.resume-note a {
     color: #ffffff;
+    text-decoration: underline;
 }
 
 /* --- Mobile menu button (hidden on desktop) --- */
@@ -864,7 +907,8 @@ nav.menu-open .menu-toggle span:nth-child(3) { transform: translateY(-7px) rotat
 /* Hover lift effects only on devices with a real mouse (avoids "stuck" hovers on phones) */
 @media (hover: none) {
     .timeline-item:hover,
-    .project-card:hover {
+    .project-card:hover,
+    .resume-page:hover {
         transform: none;
     }
 }
@@ -979,10 +1023,9 @@ nav.menu-open .menu-toggle span:nth-child(3) { transform: translateY(-7px) rotat
         width: 100%;
     }
 
-    #home .btn-resume {
-        width: 100%;
-        max-width: 340px;
-        justify-content: center;
+    .page-header .home-buttons {
+        margin-left: auto;
+        margin-right: auto;
     }
 
     .btn-home {
@@ -1056,6 +1099,18 @@ nav.menu-open .menu-toggle span:nth-child(3) { transform: translateY(-7px) rotat
         grid-template-columns: 1fr 1fr;
         gap: 10px;
         margin-top: 25px;
+    }
+
+    .btn-nav-wide {
+        grid-column: 1 / -1;
+    }
+
+    .resume-section {
+        padding: 30px 12px 40px;
+    }
+
+    .resume-pages {
+        gap: 16px;
     }
 
     .btn-nav {

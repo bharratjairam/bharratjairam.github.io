@@ -10,7 +10,8 @@
 
     const currentPage = (() => {
         const file = location.pathname.split("/").pop();
-        return PAGES.includes(file) ? file : "index.html";
+        // "" means the site root (index.html); other pages (like resume.html) aren't indexed
+        return file === "" ? "index.html" : file;
     })();
 
     let entries = [];
@@ -65,7 +66,7 @@
     }
 
     async function buildIndex() {
-        entries = collect(document, currentPage);
+        entries = PAGES.includes(currentPage) ? collect(document, currentPage) : [];
         const others = PAGES.filter((p) => p !== currentPage);
         await Promise.all(others.map(async (page) => {
             try {

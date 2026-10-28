@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Bharrat Jairam | Cybersecurity & IT Portfolio</title>
+    <meta name="description" content="Bharrat Jairam - M.S. Digital Forensics & Cybersecurity student at the University at Albany and Application Support Technician.">
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
@@ -17,14 +18,21 @@
             <li><a href="#skills">Skills</a></li>
             <li><a href="projects.html">Projects</a></li>
         </ul>
+        <button class="search-trigger" type="button" aria-label="Search the site" title="Search (Ctrl+K)">
+            <svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><circle cx="11" cy="11" r="7" fill="none" stroke="currentColor" stroke-width="2"/><line x1="16.5" y1="16.5" x2="21" y2="21" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+            <span>Search</span>
+            <kbd>Ctrl K</kbd>
+        </button>
     </nav>
 
     <section id="home" class="bg">
         <h1>Bharrat Jairam</h1>
-        <p class="label">Cybersecurity & IT | Data Labeling | Game Development | Technical Writing</p>
-        <p>IT professional and English major specializing in technical troubleshooting, AI model evaluation, and game design. Experienced in C++, C#, Python, and technical writing. Currently applying to a Master's program for Cybersecurity.</p>
-        <a href="#experience"><button class="btn-home">View My Experience</button></a>
-        <a href="projects.html"><button class="btn-home">Explore Projects</button></a>
+        <p class="label">Cybersecurity & Digital Forensics | IT & Application Support | AI Data Labeling | Game Development</p>
+        <p>Graduate student in Digital Forensics and Cybersecurity at the University at Albany and Application Support Technician at Utech/Endosoft. Experienced in technical troubleshooting, SQL Server support, AI model evaluation, and game design, with a background in English and technical writing.</p>
+        <div class="home-buttons">
+            <a href="#experience"><button class="btn-home">View My Experience</button></a>
+            <a href="projects.html"><button class="btn-home">Explore Projects</button></a>
+        </div>
     </section>
 
     <section id="education">
@@ -34,23 +42,27 @@
             <div class="timeline-item">
                 <div class="item-header">
                     <div class="item-title">University at Albany</div>
+                    <div class="item-date">Expected May 2027</div>
                 </div>
-                <div class="item-header">
-                    <div class="item-subtitle">M.S. in Digital Forensics and Cybersecurity</div>
-                    <div class="item-date">Expected Graduation: May 2027</div>
-                </div>
-                <div class="item-header">
-                    <div class="item-subtitle">B.A. in English | Minor: Game Design & Development</div>
-                    <div class="item-date">Class of 2026</div>
-                </div>
-
+                <div class="item-subtitle">M.S. in Digital Forensics and Cybersecurity</div>
                 <ul>
                     <li><strong>GPA:</strong> 3.7</li>
+                </ul>
+            </div>
+
+            <div class="timeline-item">
+                <div class="item-header">
+                    <div class="item-title">University at Albany</div>
+                    <div class="item-date">Graduated May 2026</div>
+                </div>
+                <div class="item-subtitle">B.A. in English | Minor: Game Design & Development</div>
+                <ul>
+                    <li><strong>GPA:</strong> 3.7 | <strong>Magna Cum Laude</strong></li>
                     <li><strong>Honors:</strong>
-                        <ul style="list-style-type:circle; margin-left: 20px;">
-                            <li>Dr. Seth Spellman Award for Academic Excellence Spring 2026</li>
-                            <li>Honors Graduate Spring 2026</li>
-                            <li>Dean's List Spring 2025 & Fall 2025</li>
+                        <ul class="sub-list">
+                            <li>Dr. Seth Spellman, Jr. Award for Academic Achievement (Spring 2026)</li>
+                            <li>Dean's List (Spring 2025, Fall 2025, Spring 2026)</li>
+                            <li>UAlbany Showcase Presenter (Fall 2025)</li>
                         </ul>
                     </li>
                     <li><strong>Activities:</strong> NSLS Online Member</li>
@@ -62,17 +74,11 @@
                     <div class="item-title">Schenectady County Community College</div>
                     <div class="item-date">August 2019 - December 2022</div>
                 </div>
-                <div class="item-subtitle">A.A.S in Cybersecurity</div>
+                <div class="item-subtitle">Coursework in Cyber Security</div>
                 <ul>
-                    <li><strong>Honors:</strong> President's List Fall 2019 & Spring 2022</li>
+                    <li><strong>GPA:</strong> 3.33</li>
+                    <li><strong>Honors:</strong> Dean's List (Fall 2019), President's List (Spring 2022)</li>
                 </ul>
-            </div>
-            
-            <div class="timeline-item">
-                <div class="item-header">
-                    <div class="item-title">Schenectady High School</div>
-                    <div class="item-date">Class of 2019</div>
-                </div>
             </div>
         </div>
     </section>
@@ -80,6 +86,21 @@
     <section id="experience">
         <div class="section-content">
             <h2 class="section-title">Professional Experience</h2>
+
+            <div class="timeline-item">
+                <div class="item-header">
+                    <div class="item-title">Utech/Endosoft</div>
+                    <div class="item-date">August 2026 - Present</div>
+                </div>
+                <div class="item-subtitle">Application Support Technician</div>
+                <ul>
+                    <li>Managed the ticketing lifecycle by answering phone calls, creating, documenting, and closing support tickets, while escalating complex technical issues as needed.</li>
+                    <li>Installed, configured, and maintained SQL Server, SSMS, Express, and local databases, alongside building new client systems prior to deployment.</li>
+                    <li>Provided comprehensive software support by installing and troubleshooting EndoVault, ARGUS, and ENR/GRS reports, while executing SQL queries for diagnostics.</li>
+                    <li>Delivered in-house IT support and maintained client account information within the ERP system.</li>
+                    <li>Facilitated client training on EndoVault usage and resolved integration issues by leveraging a comprehensive understanding of the EPIC API.</li>
+                </ul>
+            </div>
 
             <div class="timeline-item">
                 <div class="item-header">
@@ -92,6 +113,7 @@
                     <li>Performed RLHF by ranking model-generated responses based on honesty, harmlessness, and helpfulness (HHH) criteria.</li>
                     <li>Conducted quality assurance on peer-labeled data to ensure adherence to project requirements.</li>
                     <li>Identified edge cases and hallucinations in AI responses and provided detailed feedback to engineering teams to refine data collection.</li>
+                    <li>Balanced high-volume throughput with strict accuracy standards to meet project deadlines in a fast-paced, remote environment.</li>
                 </ul>
             </div>
 
@@ -104,21 +126,24 @@
                 <ul>
                     <li>Provided Tier 1 technical support to end-users, resolving hardware, software, and network issues in a timely and efficient manner.</li>
                     <li>Diagnosed and resolved technical issues via phone, email, and remote desktop tools, achieving a high first-call resolution rate.</li>
+                    <li>Maintained and updated the ticketing system to track and document issue resolution.</li>
                     <li>Provided support for VPN and remote access technologies, ensuring secure and reliable connectivity for remote employees.</li>
-                    <li>Achieved consistent 90%+ satisfaction rate on Call and Ticket scoring.</li>
+                    <li>Collaborated with cross-functional teams to escalate and resolve complex technical issues, achieving a consistent 90%+ satisfaction rate on Call and Ticket scoring.</li>
                 </ul>
             </div>
 
             <div class="timeline-item">
                 <div class="item-header">
                     <div class="item-title">AutoZone</div>
-                    <div class="item-date">December 2021 - Present</div>
+                    <div class="item-date">December 2021 - October 2026</div>
                 </div>
-                <div class="item-subtitle">Assistant Store Manager / Parts Sales / Inventory Manager | Colonie, NY</div>
+                <div class="item-subtitle">Assistant Store Manager / Parts Sales / Inventory | Colonie, NY</div>
                 <ul>
-                    <li>Managed 3 unique departments: retail, commercial, and hub operations in the upstate NY region.</li>
-                    <li>Created weekly schedules for 50+ employees and delegated responsibilities to ensure smooth business operation.</li>
-                    <li>Trained employees in their roles and processed onboarding documentation for new hires.</li>
+                    <li>Communicated with a variety of clients in-person and over the phone to ensure customer satisfaction.</li>
+                    <li>Conducted interviews and processed onboarding documentation for new hires.</li>
+                    <li>Trained employees in their roles within their department and delegated responsibilities to ensure smooth business operation.</li>
+                    <li>Created weekly schedules for 50+ employees and managed 3 unique departments: retail, commercial, and hub operations in the upstate NY region.</li>
+                    <li>Processed and managed truck shipments 3 times a week in a warehouse environment; scanned and verified quantity-on-hand for new and existing inventory.</li>
                 </ul>
             </div>
 
@@ -129,7 +154,9 @@
                 </div>
                 <div class="item-subtitle">Retail Sales Manager & Service Advisor | Colonie, NY</div>
                 <ul>
-                    <li>Assisted customers by providing price and availability of inventory, and procured parts from various vendors.</li>
+                    <li>Assisted walk-in, commercial, and over-the-phone customers by providing price and availability of inventory.</li>
+                    <li>Procured parts from various vendors to meet customer needs.</li>
+                    <li>Performed opening and closing store tasks and scheduled appointments for customers needing vehicle maintenance.</li>
                     <li>Managed and communicated with service technicians in the workshop for an efficient customer experience.</li>
                 </ul>
             </div>
@@ -139,7 +166,7 @@
     <section id="skills">
         <div class="section-content">
             <h2 class="section-title">Technical Skills</h2>
-            
+
             <div class="skills-container">
                 <div class="skill-box">
                     <h3>Programming</h3>
@@ -148,42 +175,44 @@
                         <span class="badge">C#</span>
                         <span class="badge">Python</span>
                         <span class="badge">Java</span>
-                        <span class="badge">HTML / CSS</span>
-                        <span class="badge">PowerShell</span>
+                        <span class="badge">HTML</span>
+                        <span class="badge">CSS</span>
                     </div>
                 </div>
-                
+
                 <div class="skill-box">
                     <h3>IT & Networking</h3>
                     <div>
                         <span class="badge">Networking Fundamentals</span>
                         <span class="badge">Active Directory</span>
-                        <span class="badge">Virtual Machines</span>
+                        <span class="badge">PowerShell</span>
+                        <span class="badge">Virtual Machine Management</span>
                         <span class="badge">Windows Disk Manager</span>
-                        <span class="badge">Hardware Troubleshooting</span>
-                        <span class="badge">Software Installation</span>
-                    </div>
-                </div>
-                
-                <div class="skill-box">
-                    <h3>AI & Data</h3>
-                    <div>
-                        <span class="badge">Prompt Engineering</span>
-                        <span class="badge">AI Model Evaluation</span>
-                        <span class="badge">Data Annotation & Labeling</span>
-                        <span class="badge">QA Testing</span>
+                        <span class="badge">Software & Hardware Troubleshooting</span>
                     </div>
                 </div>
 
                 <div class="skill-box">
-                    <h3>Game Design</h3>
+                    <h3>AI & Professional</h3>
+                    <div>
+                        <span class="badge">Prompt Engineering</span>
+                        <span class="badge">AI Model Evaluation & QA</span>
+                        <span class="badge">Data Annotation & Labeling</span>
+                        <span class="badge">Technical Writing</span>
+                    </div>
+                </div>
+
+                <div class="skill-box">
+                    <h3>Game Development</h3>
                     <div>
                         <span class="badge">Unreal Engine</span>
                         <span class="badge">Unity</span>
                         <span class="badge">Godot</span>
-                        <span class="badge">Blender</span>
                         <span class="badge">Construct</span>
                         <span class="badge">Twine</span>
+                        <span class="badge">Figma</span>
+                        <span class="badge">Blender</span>
+                        <span class="badge">Physical Game Development</span>
                     </div>
                 </div>
             </div>
@@ -196,5 +225,6 @@
         <p style="margin-top: 15px; font-size: 0.85rem;">&copy; 2026 Bharrat Jairam. Created for GitHub Pages.</p>
     </footer>
 
+    <script src="search.js"></script>
 </body>
 </html>
